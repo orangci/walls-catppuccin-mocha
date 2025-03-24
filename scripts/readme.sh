@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-$commit_msg = $1
+commit_msg="$1"
 
 # Function to generate the markdown file
 generate_markdown() {
@@ -64,7 +64,7 @@ commit_and_push() {
     
     cd $image_folder
     git add .
-    git commit -m $commit_msg
+    git commit -m "$commit_msg"
     git push
     cd ..
 }
